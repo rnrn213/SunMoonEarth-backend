@@ -1,17 +1,10 @@
 package com.cos.sunmoonearth.model;
 
-import java.util.List;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,17 +16,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Sun_SunCheckList {
+public class MoonCheckList {
+
 
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
 	private int id;
 	
-	@ManyToOne
-	@JoinColumn(name="sunId")
-	private Sun sun;
+	@Column(nullable = false)
+	private String checkName;
 	
-	@ManyToOne
-	@JoinColumn(name="sunCheckListId")
-	private SunCheckList sunCheckList;
+	@Column(nullable = false, columnDefinition = "integer default 0")
+	private int checkCnt;
 }
