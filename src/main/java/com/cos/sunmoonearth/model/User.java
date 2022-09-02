@@ -30,7 +30,7 @@ public class User {
 	private int id;
 	
 	@Column(nullable = false, length = 30, unique = true)
-	private String userName;
+	private String username;
 	
 	@Column(nullable = false, length = 100)
 	private String password;
@@ -41,7 +41,7 @@ public class User {
 	@Column(nullable = false, length = 20)
 	private String nickName;
 	
-	@ColumnDefault(" 'user' ")
+	@ColumnDefault(" 'ROLE_USER' ")
 	@Enumerated(EnumType.STRING)
 	private RoleType role;
 	
