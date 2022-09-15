@@ -60,9 +60,9 @@ public class Sun extends BaseTimeEntity{
 	@OrderBy("id desc")
 	private List<SunReply> replys;
 	
-	/*
+	
 	@ManyToOne
-	@JoinColumn(name="usersId")
+	@JoinColumn(name="userId")
 	private User user;
-	*/
+	
 }
