@@ -47,12 +47,11 @@ public class MoonRe extends BaseTimeEntity{
 	private int choice;
 	
 	@ManyToOne
-	@JoinColumn(name="boarId")
+	@JoinColumn(name="moonId")
 	private Moon moon;
 	
-	/*
 	@ManyToOne
-	@JoinColumn(name="usersId")
+	@JoinColumn(name="userId")
 	private User user;
-	*/
+	
 }

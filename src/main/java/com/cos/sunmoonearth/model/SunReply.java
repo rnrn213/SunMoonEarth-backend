@@ -32,13 +32,13 @@ public class SunReply {
 	private String content;
 	
 	@ManyToOne
-	@JoinColumn(name="boarId")
+	@JoinColumn(name="sunId")
 	private Sun sun;
-	/*
+	
 	@ManyToOne
-	@JoinColumn(name="boarId")
+	@JoinColumn(name="userId")
 	private User user;
-	*/
+	
 	@CreationTimestamp
 	private Timestamp createDate;
 }

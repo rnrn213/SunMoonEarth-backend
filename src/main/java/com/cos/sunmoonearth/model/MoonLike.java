@@ -22,13 +22,13 @@ public class MoonLike {
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
 	private int id;
-	/*
+	
 	@ManyToOne
 	@JoinColumn(name="userId")
 	private User user;
-	*/
+	
 	
 	@ManyToOne
-	@JoinColumn(name="boarId")
+	@JoinColumn(name="moonId")
 	private Moon moon;
 }
